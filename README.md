@@ -1,4 +1,4 @@
-# Trailo - Project Management Tool
+# Project Management Tool
 
 A Trello-style project management application with real-time collaboration, drag-and-drop boards, and team management. Built with React, Node.js, Express, MongoDB, and Socket.io.
 
@@ -13,15 +13,15 @@ A Trello-style project management application with real-time collaboration, drag
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18 + Vite + Tailwind CSS |
-| Drag & Drop | @dnd-kit/core + @dnd-kit/sortable |
-| Real-time | Socket.io |
-| Backend | Node.js + Express |
-| Database | MongoDB + Mongoose |
-| Auth | JWT (JSON Web Tokens) |
-| Containerization | Docker + Docker Compose |
+| Layer            | Technology                        |
+| ---------------- | --------------------------------- |
+| Frontend         | React 18 + Vite + Tailwind CSS    |
+| Drag & Drop      | @dnd-kit/core + @dnd-kit/sortable |
+| Real-time        | Socket.io                         |
+| Backend          | Node.js + Express                 |
+| Database         | MongoDB + Mongoose                |
+| Auth             | JWT (JSON Web Tokens)             |
+| Containerization | Docker + Docker Compose           |
 
 ## Quick Start
 
@@ -52,27 +52,29 @@ npm run dev
 
 ## Access
 
-| Service | URL |
-|---------|-----|
-| Frontend | http://localhost:5174 |
+| Service     | URL                       |
+| ----------- | ------------------------- |
+| Frontend    | http://localhost:5174     |
 | Backend API | http://localhost:5001/api |
 
 ## Demo Accounts
 
-| Email | Password | Role |
-|-------|----------|------|
-| demo@trailo.com | demo123 | Owner (has sample board) |
-| admin@trailo.com | admin123 | Member |
+| Email            | Password | Role                     |
+| ---------------- | -------- | ------------------------ |
+| demo@trailo.com  | demo123  | Owner (has sample board) |
+| admin@trailo.com | admin123 | Member                   |
 
 ## API Endpoints
 
 ### Auth
+
 - `POST /api/auth/register` - Register
 - `POST /api/auth/login` - Login
 - `GET /api/auth/profile` - Profile
 - `PUT /api/auth/profile` - Update profile
 
 ### Boards
+
 - `GET /api/boards` - My boards
 - `POST /api/boards` - Create board
 - `GET /api/boards/:id` - Get board with lists & cards
@@ -82,12 +84,14 @@ npm run dev
 - `DELETE /api/boards/:id/members/:userId` - Remove member
 
 ### Lists
+
 - `POST /api/lists` - Create list
 - `GET /api/lists/board/:boardId` - Get lists
 - `PUT /api/lists/:id` - Update list
 - `DELETE /api/lists/:id` - Delete list
 
 ### Cards
+
 - `POST /api/cards` - Create card
 - `GET /api/cards/:id` - Get card
 - `PUT /api/cards/:id` - Update card
@@ -97,13 +101,13 @@ npm run dev
 
 ## Real-time Events
 
-| Event | Trigger | Payload |
-|-------|---------|---------|
-| `board:join` | Join board room | boardId |
-| `board:leave` | Leave board room | boardId |
-| `card:update` | Edit card | cardId, data |
-| `card:create` | Create card | card |
-| `card:delete` | Delete card | cardId |
-| `list:update` | Edit list | listId, data |
-| `list:create` | Create list | list |
-| `list:delete` | Delete list | listId |
+| Event         | Trigger          | Payload      |
+| ------------- | ---------------- | ------------ |
+| `board:join`  | Join board room  | boardId      |
+| `board:leave` | Leave board room | boardId      |
+| `card:update` | Edit card        | cardId, data |
+| `card:create` | Create card      | card         |
+| `card:delete` | Delete card      | cardId       |
+| `list:update` | Edit list        | listId, data |
+| `list:create` | Create list      | list         |
+| `list:delete` | Delete list      | listId       |
